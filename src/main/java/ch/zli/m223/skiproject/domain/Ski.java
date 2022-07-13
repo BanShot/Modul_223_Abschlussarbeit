@@ -1,4 +1,4 @@
-package ch.zli.m223.punchclock.domain;
+package ch.zli.m223.skiproject.domain;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -9,21 +9,21 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-public class Entry {
+public class Ski {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
     @Column(nullable = false)
-    private LocalDateTime checkIn;
+    private String laenge;
+
+    private String breite;
 
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @Column(nullable = false)
-    private LocalDateTime checkOut;
+    private int gewicht;
 
     public Long getId() {
         return id;
@@ -33,19 +33,27 @@ public class Entry {
         this.id = id;
     }
 
-    public LocalDateTime getCheckIn() {
-        return checkIn;
+    public String getLaenge() {
+        return laenge;
     }
 
-    public void setCheckIn(LocalDateTime checkIn) {
-        this.checkIn = checkIn;
+    public void setLaenge(String laenge) {
+        this.laenge = laenge;
     }
 
-    public LocalDateTime getCheckOut() {
-        return checkOut;
+    public String getBreite() {
+        return breite;
     }
 
-    public void setCheckOut(LocalDateTime checkOut) {
-        this.checkOut = checkOut;
+    public void setBreite(String breite) {
+        this.breite = breite;
+    }
+
+    public int getGewicht() {
+        return gewicht;
+    }
+
+    public void setGewicht(int gewicht) {
+        this.gewicht = gewicht;
     }
 }

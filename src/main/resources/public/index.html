@@ -5,18 +5,16 @@
         <meta name="viewport"
               content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Punchclock Client</title>
+        <title>Ski Angaben</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <script src="script.js" type="application/javascript"></script>
     </head>
     <body>
-        <form id="entryForm">
-            <label for="checkIn">Check in</label>
-            <input type="date" name="checkInDate" id="checkIn" required>
-            <input type="time" name="checkInTime" required>
-            <label for="checkOut">Check out</label>
-            <input type="date" name="checkOutDate" id="checkOut" required>
-            <input type="time" name="checkOutTime" required>
+        <form id="skiForm">
+            <label for="skiDisplay">Angaben Ski</label>
+            <input type="text" name="laenge" placeholder="Länge in cm" required>
+            <input type="text" name="breite" placeholder="Breite in cm" required>
+            <input type="text" name="gewicht" placeholder="Gewicht in kg" required>
             <input type="submit" value="Save" />
             <input type="reset" value="Cancel" />
         </form>
@@ -24,12 +22,12 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Check in</th>
-                    <th>Check out</th>
-                    <th>Actions</th>
+                    <th>Länge</th>
+                    <th>Breite</th>
+                    <th>Gewicht</th>
                 </tr>
             </thead>
-            <tbody id="entryDisplay">
+            <tbody id="skiDisplay">
                 <tr>
                     <td colspan="3">Loading...</td>
                 </tr>

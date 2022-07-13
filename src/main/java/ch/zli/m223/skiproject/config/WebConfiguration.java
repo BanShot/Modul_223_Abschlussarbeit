@@ -1,4 +1,4 @@
-package ch.zli.m223.punchclock.config;
+package ch.zli.m223.skiproject.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
