@@ -18,10 +18,9 @@ public class Ski {
     @Column(nullable = false)
     private String laenge;
 
+    @Column(nullable = false)
     private String breite;
 
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
     @Column(nullable = false)
     private int gewicht;
 

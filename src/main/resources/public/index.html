@@ -11,23 +11,23 @@
     </head>
     <body>
         <form id="skiForm">
-            <label for="skiDisplay">Angaben Ski</label>
-            <input type="text" name="laenge" placeholder="Länge in cm" required>
-            <input type="text" name="breite" placeholder="Breite in cm" required>
-            <input type="text" name="gewicht" placeholder="Gewicht in kg" required>
+            <label class="title" for="skiDisplay">Angaben Ski</label>
+            <input [(ngModel)]="'centimeter' + set.reps" type="number" name="laenge" placeholder="Länge in cm" required>
+            <input [(ngModel)]="'centimeter' + set.reps" type="number" name="breite" placeholder="Breite in cm" required>
+            <input [(ngModel)]="'kg' + set.reps" type="number" name="gewicht" placeholder="Gewicht in kg" required>
             <input type="submit" value="Save" />
             <input type="reset" value="Cancel" />
         </form>
         <table>
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Länge</th>
-                    <th>Breite</th>
-                    <th>Gewicht</th>
+                    <th class="thtitle">ID</th>
+                    <th class="thtitle">Länge</th>
+                    <th class="thtitle">Breite</th>
+                    <th class="thtitle">Gewicht</th>
                 </tr>
             </thead>
-            <tbody id="skiDisplay">
+            <tbody id="skiDisplay" class="skis">
                 <tr>
                     <td colspan="3">Loading...</td>
                 </tr>

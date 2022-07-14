@@ -3,9 +3,6 @@ let skis = [];
 let mode = 'create';
 let currentSki;
 
-const dateAndTimeToDate = (dateString, timeString) => {
-    return new Date(`${dateString}T${timeString}`).toISOString();
-};
 
 // API Requests
 const createSki = (ski) => {
@@ -70,8 +67,9 @@ const saveForm = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const ski = {};
-    ski['checkIn'] = dateAndTimeToDate(formData.get('checkInDate'), formData.get('checkInTime'));
-    ski['checkOut'] = dateAndTimeToDate(formData.get('checkOutDate'), formData.get('checkOutTime'));
+    ski['laenge'] = formData.get('laenge');
+    ski['breite'] = formData.get('breite');
+    ski['gewicht'] = formData.get('gewicht');
 
     if (mode === 'create') {
         createSki(ski);
@@ -87,14 +85,12 @@ const editSki = (ski) => {
     currentSki = ski;
 
     const skiForm = document.querySelector('#skiForm');
-    const checkInDateField = skiForm.querySelector('[name="checkInDate"]');
-    checkInDateField.value = ski.checkIn.split('T')[0];
-    const checkInTimeField = skiForm.querySelector('[name="checkInTime"]');
-    checkInTimeField.value = ski.checkIn.split('T')[1].slice(0, -3);
-    const checkOutDateField = skiForm.querySelector('[name="checkOutDate"]');
-    checkOutDateField.value = ski.checkOut.split('T')[0];
-    const checkOutTimeField = skiForm.querySelector('[name="checkOutTime"]');
-    checkOutTimeField.value = ski.checkOut.split('T')[1].slice(0, -3);
+    const laengeField = skiForm.querySelector('[name="laenge"]');
+    laengeField.value = ski.laenge;
+    const breiteField = skiForm.querySelector('[name="breite"]');
+    breiteField.value = ski.breite;
+    const gewichtField = skiForm.querySelector('[name="gewicht"]');
+    gewichtField.value = ski.gewicht;
 }
 
 const createCell = (text) => {
@@ -122,11 +118,12 @@ const createActions = (entry) => {
 const renderSkis = () => {
     const display = document.querySelector('#skiDisplay');
     display.innerHTML = '';
-    skis.forEach((entry) => {
+    skis.forEach((skis) => {
         const row = document.createElement('tr');
         row.appendChild(createCell(skis.id));
-        row.appendChild(createCell(new Date(skis.checkIn).toLocaleString()));
-        row.appendChild(createCell(new Date(skis.checkOut).toLocaleString()));
+        row.appendChild(createCell(skis.laenge));
+        row.appendChild(createCell(skis.breite));
+        row.appendChild(createCell(skis.gewicht));
         row.appendChild(createActions(skis));
         display.appendChild(row);
     });
