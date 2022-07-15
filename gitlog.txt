@@ -1,0 +1,35 @@
+commit 60a367655743e6aa4d088aaae0668ca11b78360a
+Author: Nicola Werlen <nicwer1@az.zli.ch>
+Date:   Fri Jul 15 16:29:06 2022 +0200
+
+    Memberseite + Member speichern
+
+commit 85f6ec4aeaca2012e11489fa5b42ddad2bb23671
+Author: Nicola Werlen <nicwer1@az.zli.ch>
+Date:   Fri Jul 15 13:21:47 2022 +0200
+
+    login und logout hinzugefügt
+
+commit 84e134358aee2c0f83c53784a814a328fa90e1f7
+Author: Nicola Werlen <nicwer1@az.zli.ch>
+Date:   Thu Jul 14 12:53:56 2022 +0200
+
+    Erstellung Role, User, Repositorys und Service
+
+commit b26a097864564bf85c7a7a942728cd9d8371010c
+Author: Nicola Werlen <nicwer1@az.zli.ch>
+Date:   Thu Jul 14 10:28:45 2022 +0200
+
+    Anpassungen Frontend (HTML Dokument)
+
+commit fae86223270f30d629c7f6385c96f82e81b2998e
+Author: Nicola Werlen <nicwer1@az.zli.ch>
+Date:   Wed Jul 13 16:37:37 2022 +0200
+
+    Anpassung auf Ski (eigene Idee)
+
+commit a03b6496bbede96b13c6000240398d0552b75b89
+Author: Nicola Werlen <nicwer1@az.zli.ch>
+Date:   Wed Jul 13 11:00:59 2022 +0200
+
+    Basisprojekt Dateien
