@@ -6,6 +6,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .title {
@@ -42,4 +43,30 @@ table {
 
 .skiForm {
     margin-bottom: 20px;
+}
+
+a:link, a:visited {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 20px;
+    width: 60px;
+    font-size: 12px;
+}
+
+a:hover, a:active {
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+    width: 60px;
+    font-size: 12px;
+}
+
+.flex {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
 }
