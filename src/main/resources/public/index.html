@@ -10,7 +10,7 @@
         <script src="script.js" type="application/javascript"></script>
     </head>
     <body>
-        <form id="skiForm">
+        <form id="skiForm" class="skiForm">
             <label class="title" for="skiDisplay">Angaben Ski</label>
             <input [(ngModel)]="'centimeter' + set.reps" type="number" name="laenge" placeholder="Länge in cm" required>
             <input [(ngModel)]="'centimeter' + set.reps" type="number" name="breite" placeholder="Breite in cm" required>
@@ -18,6 +18,7 @@
             <input type="submit" value="Save" />
             <input type="reset" value="Cancel" />
         </form>
+        <a href="/logout">Logout</a>
         <table>
             <thead>
                 <tr>
